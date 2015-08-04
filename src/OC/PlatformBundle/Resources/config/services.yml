@@ -1,0 +1,9 @@
+# src/OC/PlatformBundle/Resources/config/services.yml
+services:
+    oc_platform.advert_purger:
+        class: OC\PlatformBundle\AdvertPurger\OCAdvertPurger
+        arguments: ["@doctrine"]
+    #    service_name:
+    #        class: AppBundle\Directory\ClassName
+    #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+

@@ -1,0 +1,21 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Lecture d'une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+    {% for advert in listAdverts %}
+        <h2>
+            Advert purged {{ advert.title }}
+        </h2>
+        <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
+        <div class="well" style="clear: both;">
+            {{ advert.content }}
+        </div>
+    {% endfor %}
+
+{% endblock %}
